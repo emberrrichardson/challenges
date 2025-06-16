@@ -38,7 +38,7 @@ system = Pack(molecules=ellipsoid_chain, density=.05*u.Unit("nm**-3"),
 
 #change r_cut from 3
 ff = EllipsoidForcefield(epsilon=1.0,lpar=1.0,lperp=0.5,
-                         r_cut=2.0,bond_k=100,bond_r0=0)
+                         r_cut=2.5,bond_k=100,bond_r0=0)
 
 
 # In[22]:
