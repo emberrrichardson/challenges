@@ -16,7 +16,7 @@ import unyt as u
 #sim_visualizer = FresnelGSD(
     #gsd_file="trajectory.gsd", frame=10, view_axis=(1, 1, 1))
 import hoomd
-import signac
+#import signac
 from flowermd.base import Pack,Lattice, Simulation
 from flowermd.library import EllipsoidChain
 from flowermd.library import EllipsoidForcefield
