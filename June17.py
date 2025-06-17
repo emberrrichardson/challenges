@@ -29,7 +29,7 @@ from flowermd.utils.constraints import create_rigid_ellipsoid_chain
 
 #changed edge value
 ellipsoid_chain = EllipsoidChain(lengths=1,num_mols=128,lpar=1.0,bead_mass=1.0)
-system = Pack(molecules=ellipsoid_chain, density=.25*u.Unit("nm**-3"), 
+system = Pack(molecules=ellipsoid_chain, density=.05*u.Unit("nm**-3"), 
               packing_expand_factor=4,edge=1,overlap=1,fix_orientation=True)
 
 
@@ -64,7 +64,7 @@ ellipsoid_sim = Simulation(
     log_write_freq=int(1e4),
     log_file_name='june17-11am.txt')
 
-target_box = get_target_box_number_density(density=.5*u.Unit("nm**-3"),n_beads=128)
+target_box = get_target_box_number_density(density=.4*u.Unit("nm**-3"),n_beads=128)
 ellipsoid_sim.run_update_volume(final_box_lengths=target_box, kT=1.0, n_steps=5e6,tau_kt=5*ellipsoid_sim.dt,
                                 period=5,thermalize_particles=True)
 print("shrink finished")
