@@ -64,7 +64,7 @@ ellipsoid_sim = Simulation(
     log_write_freq=int(1e4),
     log_file_name='june17-11am.txt')
 
-target_box = get_target_box_number_density(density=.5*u.Unit("nm**-3"),n_beads=128)
+target_box = get_target_box_number_density(density=.42*u.Unit("nm**-3"),n_beads=128)
 ellipsoid_sim.run_update_volume(final_box_lengths=target_box, kT=1.0, n_steps=5e6,tau_kt=5*ellipsoid_sim.dt,
                                 period=5,thermalize_particles=True)
 print("shrink finished")
